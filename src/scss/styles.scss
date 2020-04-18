@@ -129,15 +129,14 @@ body {
     .post__footer {
         @extend %post;
     }
-}
 
+    .post__footer {
+        .commit {
+            font-weight: bold;
+        }
 
+        .color {
 
-.post__footer {
-    &>li:first-child {
-        font-weight: bold;
-
-        &>li:last-child {
             width: auto;
             background: white;
             display: flex;
@@ -167,7 +166,6 @@ body {
                 &:nth-child(3) {
                     background: #C0C0C0;
                 }
-
             }
         }
     }
