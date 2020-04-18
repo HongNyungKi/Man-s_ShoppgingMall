@@ -1,0 +1,11 @@
+%post {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+
+    li {
+        margin: 6px 0;
+    }
+}

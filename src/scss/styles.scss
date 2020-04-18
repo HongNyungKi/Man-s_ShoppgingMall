@@ -3,15 +3,22 @@
 
 * {
     box-sizing: border-box;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
 }
 
 body {
-    // font-family: ;
+    margin-top: 100px;
+    // background: red;
 }
 
 .header {
     width: 100%;
-    background: white;
+    background: #f4f4f4;
     height: 70px;
     display: flex;
     justify-content: space-between;
@@ -19,12 +26,12 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    padding: 50px 30px;
 
     h1 {
         font-size: 30px;
         text-transform: uppercase;
         font-weight: bold;
-        padding: 0 30px;
         font-family: 'Rock Salt', cursive;
     }
 
@@ -64,11 +71,6 @@ body {
                 }
             }
 
-            a {
-                color: inherit;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
 
             &:not(:first-child) {
                 margin-left: 20px;
@@ -76,24 +78,97 @@ body {
         }
 
     }
+
+    .user {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 13px;
+
+        &>span:not(:first-child) {
+            margin-left: 4px;
+        }
+    }
 }
 
 .posts {
-    margin-top: 70px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 55vh;
+    grid-auto-rows: 50vh;
 
+    &>section:nth-child(1) {
+        background: #8ec6c5;
+    }
+}
 
-    .post {
-        padding: 20px;
+.post {
+    padding: 20px;
 
-        &:nth-child(1) {
-            background: red;
+    .post__content {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 100%;
         }
 
-        .post__footer {
-            // display: flex;
+
+        .post__text {
+            @extend %post;
+
+            &>li:nth-child(2) {
+                text-decoration: line-through;
+            }
+
+            &>li:last-child {
+                .bargain {
+                    color: red;
+                }
+            }
+        }
+    }
+
+    .post__footer {
+        @extend %post;
+    }
+}
+
+
+
+.post__footer {
+    &>li:first-child {
+        font-weight: bold;
+
+        &>li:last-child {
+            width: auto;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 6px;
+            border-radius: 5px;
+
+            span {
+                display: inline-block;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+
+                &:not(:last-child) {
+                    margin-right: 5px;
+                }
+
+                &:nth-child(1) {
+                    background: black;
+                }
+
+                &:nth-child(2) {
+                    background: #D7B170;
+                }
+
+                &:nth-child(3) {
+                    background: #C0C0C0;
+                }
+
+            }
         }
     }
 }
