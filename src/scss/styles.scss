@@ -16,6 +16,9 @@ body {
     // background: red;
 }
 
+
+// HEADER
+
 .header {
     width: 100%;
     background: #f4f4f4;
@@ -33,6 +36,10 @@ body {
         text-transform: uppercase;
         font-weight: bold;
         font-family: 'Rock Salt', cursive;
+
+        a {
+            padding: 15px 0;
+        }
     }
 
     .categories {
@@ -71,9 +78,12 @@ body {
                 }
             }
 
-
             &:not(:first-child) {
                 margin-left: 20px;
+            }
+
+            a {
+                padding: 20px 0;
             }
         }
 
@@ -86,87 +96,18 @@ body {
         &>span:not(:first-child) {
             margin-left: 4px;
         }
+
+        a {
+            padding: 10px 0;
+        }
     }
 }
 
-.posts {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 50vh;
+.posts__grid {
+    @extend %postGrid;
 
-    &>section:nth-child(1) {
+
+    li:nth-child(1) {
         background: #8ec6c5;
-    }
-}
-
-.post {
-    padding: 20px;
-
-    .post__content {
-        display: flex;
-        flex-direction: column;
-
-        img {
-            width: 100%;
-        }
-
-
-        .post__text {
-            @extend %post;
-
-            &>li:nth-child(2) {
-                text-decoration: line-through;
-            }
-
-            &>li:last-child {
-                .bargain {
-                    color: red;
-                }
-            }
-        }
-    }
-
-    .post__footer {
-        @extend %post;
-    }
-
-    .post__footer {
-        .commit {
-            font-weight: bold;
-        }
-
-        .color {
-
-            width: auto;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2px 6px;
-            border-radius: 5px;
-
-            span {
-                display: inline-block;
-                width: 13px;
-                height: 13px;
-                border-radius: 50%;
-
-                &:not(:last-child) {
-                    margin-right: 5px;
-                }
-
-                &:nth-child(1) {
-                    background: black;
-                }
-
-                &:nth-child(2) {
-                    background: #D7B170;
-                }
-
-                &:nth-child(3) {
-                    background: #C0C0C0;
-                }
-            }
-        }
     }
 }
