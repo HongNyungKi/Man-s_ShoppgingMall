@@ -104,10 +104,62 @@ body {
 }
 
 .posts__grid {
-    @extend %postGrid;
+    display: flex;
 
-
-    li:nth-child(1) {
+    .post:nth-child(1) {
+        @extend %postSet;
         background: #8ec6c5;
+
+        .description {
+            @extend %descriptionSet;
+
+            li:nth-child(2) {
+                text-decoration: line-through;
+            }
+
+            li:nth-child(3)>span {
+                color: red;
+            }
+
+            li:nth-child(4) {
+                font-weight: bold;
+            }
+
+            li:last-child>span {
+                &:nth-child(1) {
+                    background: #000000;
+                }
+
+                &:nth-child(2) {
+                    background: #D7B170;
+                }
+
+                &:nth-child(3) {
+                    background: #C0C0C0;
+                }
+            }
+        }
+    }
+
+    .post:nth-child(1):hover {
+        cursor: pointer;
+        background: #8ec6c5;
+
+        .thumnail {
+            visibility: hidden;
+        }
+
+        .description {
+            visibility: hidden;
+        }
+    }
+
+    .post:nth-child(2) {
+        @extend %postSet;
+        background: #8ec6c5;
+
+        .description {
+            @extend %descriptionSet;
+        }
     }
 }
