@@ -3,10 +3,21 @@
     flex-direction: column;
     padding: 30px;
 
+    .thumnail {
+        position: relative;
 
-    img {
-        width: 100%;
-        margin-bottom: 25px;
+        img {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        div:nth-child(2) {
+            font-size: 25px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            opacity: 0.7;
+        }
     }
 }
 
