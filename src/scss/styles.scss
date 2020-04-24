@@ -13,7 +13,7 @@
 
 body {
     margin-top: 100px;
-    background: tomato;
+    // background: tomato;
 }
 
 
@@ -62,7 +62,7 @@ body {
 
             &:nth-child(1) {
                 span {
-                    background: black;
+                    background: #A4C8E0;
                 }
             }
 
@@ -105,27 +105,17 @@ body {
 
 .posts__grid {
     display: flex;
+    width: 100%;
+    flex-wrap: wrap;
 
     .post:nth-child(1) {
         @extend %postSet;
-        background: #8ec6c5;
+        background: rgb(164, 200, 224);
 
         .description {
             @extend %descriptionSet;
 
-            li:nth-child(2) {
-                text-decoration: line-through;
-            }
-
-            li:nth-child(3)>span {
-                color: red;
-            }
-
-            li:nth-child(4) {
-                font-weight: bold;
-            }
-
-            li:last-child>span {
+            li:nth-child(2)>span {
                 &:nth-child(1) {
                     background: #000000;
                 }
@@ -138,30 +128,31 @@ body {
                     background: #C0C0C0;
                 }
             }
-        }
-    }
 
-    .post:nth-child(1):hover {
-        cursor: pointer;
-        background: #8ec6c5;
+            li:nth-child(3) {
+                text-decoration: line-through;
+            }
 
-        .thumnail {
-            visibility: hidden;
-        }
+            li:nth-child(4)>span {
+                color: red;
+            }
 
-        .description {
-            visibility: hidden;
+            li:last-child {
+                font-weight: bold;
+            }
+
+
         }
     }
 
     .post:nth-child(2) {
         @extend %postSet;
-        background: #8ec6c5;
+        background: rgb(137, 188, 221);
 
         .description {
             @extend %descriptionSet;
 
-            li:last-child>span {
+            li:nth-child(2)>span {
 
                 &:nth-child(1) {
                     background: #61CDE7;
@@ -179,27 +170,275 @@ body {
                     background: #000000;
                 }
             }
+
+            li:last-child {
+                font-weight: bold;
+            }
+
         }
     }
 
     .post:nth-child(3) {
-        background: #8ec6c5;
+        @extend %postSet;
+        background: rgb(164, 200, 224);
 
-        .thumnail {
-            position: relative;
+        .description {
+            @extend %descriptionSet;
 
-            img {
-                width: 100%;
-                margin-bottom: 25px;
+            li:nth-child(2)>span {
+
+                &:nth-child(1) {
+                    background: #61CDE7;
+                }
+
+                &:nth-child(2) {
+                    background: #125CC1;
+                }
+
+                &:nth-child(3) {
+                    background: #01008C;
+                }
+
+                &:nth-child(4) {
+                    background: #000000;
+                }
             }
 
-            div:nth-child(2) {
-                font-size: 25px;
-                position: absolute;
-                top: 5px;
-                left: 5px;
-                opacity: 0.7;
+            li:last-child {
+                font-weight: bold;
             }
+
+        }
+    }
+
+    .post:nth-child(4) {
+        @extend %postSet;
+        background: rgb(137, 188, 221);
+
+        .description {
+            @extend %descriptionSet;
+
+            li:nth-child(2)>span {
+
+                &:nth-child(1) {
+                    background: #61CDE7;
+                }
+
+                &:nth-child(2) {
+                    background: #125CC1;
+                }
+
+                &:nth-child(3) {
+                    background: #01008C;
+                }
+
+                &:nth-child(4) {
+                    background: #000000;
+                }
+            }
+
+            li:last-child {
+                font-weight: bold;
+            }
+
+        }
+    }
+
+    .post:nth-child(5) {
+        @extend %postSet;
+        background: rgb(164, 200, 224);
+
+        .description {
+            @extend %descriptionSet;
+
+            li:nth-child(2)>span {
+
+                &:nth-child(1) {
+                    background: #61CDE7;
+                }
+
+                &:nth-child(2) {
+                    background: #125CC1;
+                }
+
+                &:nth-child(3) {
+                    background: #01008C;
+                }
+
+                &:nth-child(4) {
+                    background: #000000;
+                }
+            }
+
+            li:last-child {
+                font-weight: bold;
+            }
+
+        }
+    }
+
+    .post:nth-child(6) {
+        @extend %postSet;
+        background: rgb(137, 188, 221);
+
+        .description {
+            @extend %descriptionSet;
+
+            li:nth-child(2)>span {
+
+                &:nth-child(1) {
+                    background: #61CDE7;
+                }
+
+                &:nth-child(2) {
+                    background: #125CC1;
+                }
+
+                &:nth-child(3) {
+                    background: #01008C;
+                }
+
+                &:nth-child(4) {
+                    background: #000000;
+                }
+            }
+
+            li:last-child {
+                font-weight: bold;
+            }
+
+        }
+    }
+
+    .post:nth-child(7) {
+        @extend %postSet;
+        background: rgb(164, 200, 224);
+
+        .description {
+            @extend %descriptionSet;
+
+            li:nth-child(2)>span {
+
+                &:nth-child(1) {
+                    background: #61CDE7;
+                }
+
+                &:nth-child(2) {
+                    background: #125CC1;
+                }
+
+                &:nth-child(3) {
+                    background: #01008C;
+                }
+
+                &:nth-child(4) {
+                    background: #000000;
+                }
+            }
+
+            li:last-child {
+                font-weight: bold;
+            }
+
+        }
+    }
+
+    .post:nth-child(8) {
+        @extend %postSet;
+        background: rgb(137, 188, 221);
+
+        .description {
+            @extend %descriptionSet;
+
+            li:nth-child(2)>span {
+
+                &:nth-child(1) {
+                    background: #61CDE7;
+                }
+
+                &:nth-child(2) {
+                    background: #125CC1;
+                }
+
+                &:nth-child(3) {
+                    background: #01008C;
+                }
+
+                &:nth-child(4) {
+                    background: #000000;
+                }
+            }
+
+            li:last-child {
+                font-weight: bold;
+            }
+
+        }
+    }
+
+    .post:nth-child(9) {
+        @extend %postSet;
+        background: rgb(164, 200, 224);
+
+        .description {
+            @extend %descriptionSet;
+
+            li:nth-child(2)>span {
+
+                &:nth-child(1) {
+                    background: #61CDE7;
+                }
+
+                &:nth-child(2) {
+                    background: #125CC1;
+                }
+
+                &:nth-child(3) {
+                    background: #01008C;
+                }
+
+                &:nth-child(4) {
+                    background: #000000;
+                }
+            }
+
+            li:last-child {
+                font-weight: bold;
+            }
+
+        }
+    }
+
+    .post:nth-child(10) {
+        @extend %postSet;
+        background: rgb(137, 188, 221);
+
+        .description {
+            @extend %descriptionSet;
+
+            li:nth-child(2)>span {
+
+                &:nth-child(1) {
+                    background: #61CDE7;
+                }
+
+                &:nth-child(2) {
+                    background: #125CC1;
+                }
+
+                &:nth-child(3) {
+                    background: #01008C;
+                }
+
+                &:nth-child(4) {
+                    background: #000000;
+                }
+            }
+
+            li:last-child {
+                font-weight: bold;
+            }
+
         }
     }
 }
